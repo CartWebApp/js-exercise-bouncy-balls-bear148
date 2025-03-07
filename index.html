@@ -2,12 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>[Your Name Here]'s Bouncing balls</title>
+    <title>Michael's Bouncing balls</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <h1>bouncing balls</h1>
+    <div id="mods">
+      <button onclick="addBall()">Add Ball</button>
+      <button onclick="removeBall()">Remove Ball</button>
+      <p id="count">Ball Count: </p>
+      <label>Velocity X Max</label>
+      <input type="range" min="1" max="100" defaultValue="10" id="velXRange" oninput="updateVelocity()">
+      <label>Velocity Y Max</label>
+      <input type="range" min="1" max="100" defaultValue="10" id="velYRange" oninput="updateVelocity()">
+      <label>Trail Length (Longer -> Shorter)</label>
+      <input type="range" min="1" max="50" defaultValue="10" id="trails" oninput="updateTrail()">
+    </div>
     <canvas></canvas>
 
     <script src="main.js"></script>
